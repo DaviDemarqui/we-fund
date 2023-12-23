@@ -16,8 +16,8 @@ module.exports = {
   defaultNetwork: "sepolia",
   networks: {
     sepolia: {
-      url: API_URL,
-      accounts: [`0x${PRIVATE_KEY}`]
+      url: "https://rpc.ankr.com/eth_sepolia",
+      accounts: [process.env.PRIVATE_KEY]
     },
     // zksync_testnet: {
     //   url: "https://zksync2-testnet.zksync.dev",
