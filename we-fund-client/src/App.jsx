@@ -17,8 +17,11 @@ export default function Home() {
         </div>
 
         <div className="flex-1 max-sm:w-full max-w-[1280px] mx-auto sm:pr-5">
-          <Navbar />
           {/* Other content/components */}
+          <Routes>
+            <Route path="/" element={<Navbar />} />
+            {/* Define other routes and components */}
+          </Routes>
         </div>
       </div>
     </BrowserRouter>
