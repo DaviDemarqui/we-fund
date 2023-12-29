@@ -71,7 +71,7 @@ function Navbar() {
 
           <div className={`absolute top-[60px] right-0
             left-0 bg-[#1c1c24] z-10 shadow-secondary py-4
-            ${!toggleDrawer} ? '-translate-y-[100vh]' : 'translate-y-0' transition-all duration-700`}>
+            ${!toggleDrawer ? '-translate-y-[100vh]' : 'translate-y-0'} transition-all duration-700`}>
               <ul className='mb-4'>
                 {navlinks.map((link) => (
                   <li
@@ -81,17 +81,28 @@ function Navbar() {
                       setIsActive(link.name);
                       setToggleDrawer(false);
                       navigate(link.link);
-                    }}
-                  >
+                    }}>
                     <img 
                       src={link.imgUrl} 
                       alt={link.name} 
                     />
-                    <p className={`ml-[20px] font-epilogue font-medium text-[14px] 
+                    <p className={`ml-[20px] font-normal text-[14px] 
                     ${isActive === link.name ? 'text-blue-600' : 'text-white'}`}>{link.name}</p>
                   </li>
                 ))}
               </ul>
+
+              <div className="flex mx-4">
+                <CustomButton 
+                  btnType="button"
+                  title={address ? 'Create a campaign' : 'Connect'}
+                  styles={address ? 'bg-blue-600  hover:bg-blue-700 rounded-full' : 'bg-[#8c6dfd] rounded-full'}
+                  handleClick={() => {
+                    if(address) navigate('create-campaign')
+                    else 'connect()'
+                  }}
+                />
+              </div>
           </div>
       </div>
     </div>
