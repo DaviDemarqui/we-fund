@@ -15,9 +15,9 @@ isTextArea, value, handleChange }) {
                 onChange={handleChange}
                 rows={10}
                 placeholder={placeholder}
-                className='py-[15px] sm:px-[25px] px-[15px] outline-none border-[1px] border-slate-600
+                className='py-[15px] sm:px-[25px] px-[15px] outline-none border-[1px] border-zinc-600
                 bg-transparent font-epilogue text-white text-[14px] placeholder:text-slate-300 rounded-[10px]
-                sm:min-w-[300px]'
+                sm:min-w-[300px] focus:border-[#63637b]'
             />
         ) : ( 
             <input 
@@ -27,8 +27,8 @@ isTextArea, value, handleChange }) {
                 type={inputType}
                 step="0.1"
                 placeholder={placeholder}
-                className='py-[15px] sm:px-[25px] px-[15px] outline-none border-[1px] border-[#353541]
-                bg-transparent font-epilogue text-white text-[14px] placeholder:text-zinc-400 rounded-[10px]
+                className='py-[15px] sm:px-[25px] px-[15px] outline-none border-[1px] border-zinc-600
+                bg-transparent font-epilogue text-white text-[14px] placeholder:text-slate-300 rounded-[10px]
                 sm:min-w-[300px] focus:border-[#63637b]'
             />
         )}

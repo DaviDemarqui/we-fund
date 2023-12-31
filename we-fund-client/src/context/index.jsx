@@ -19,14 +19,8 @@ export const StateContextProvider = ({ children }) => {
 
     const publishCampaign = async (form) => {
         try {
-            const data = await createCampaign([
-                address,
-                form.title,
-                form.description,
-                form.target,
-                new Date(form.deadline).getTime(),
-                form.image
-            ])
+            console.log(form);
+            const data = await createCampaign({ args: [address, form.title, form.description, form.target, new Date(form.deadline).getTime(), form.image] });
             console.log('Contract called successfully!', data);
         } catch (error) {
             console.error("Contract call failed!", error);
