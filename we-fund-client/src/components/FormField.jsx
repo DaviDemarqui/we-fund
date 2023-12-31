@@ -17,7 +17,7 @@ isTextArea, value, handleChange }) {
                 placeholder={placeholder}
                 className='py-[15px] sm:px-[25px] px-[15px] outline-none border-[1px] border-zinc-600
                 bg-transparent font-epilogue text-white text-[14px] placeholder:text-slate-300 rounded-[10px]
-                sm:min-w-[300px] focus:border-[#63637b]'
+                sm:min-w-[300px] focus:border-[#6161ca]'
             />
         ) : ( 
             <input 
@@ -29,7 +29,7 @@ isTextArea, value, handleChange }) {
                 placeholder={placeholder}
                 className='py-[15px] sm:px-[25px] px-[15px] outline-none border-[1px] border-zinc-600
                 bg-transparent font-epilogue text-white text-[14px] placeholder:text-slate-300 rounded-[10px]
-                sm:min-w-[300px] focus:border-[#63637b]'
+                sm:min-w-[300px] focus:border-[#6161ca]'
             />
         )}
     </label>

@@ -65,7 +65,7 @@ function CreateCampaign() {
             />
             <FormField 
               labelName="Campaign Title"
-              placeholder="John Doe"
+              placeholder="I'm building a..."
               inputType="text"
               value={form.title}
               handleChange={(e) => handleFormFieldChange('title', e)}
@@ -121,7 +121,7 @@ function CreateCampaign() {
               <CustomButton 
                 btnType="submit"
                 title="Submit new campaign"
-                styles="bg-blue-600 hover:bg-blue-700"
+                styles="bg-zinc-50 text-black"
               />
             </div>
       </form>
