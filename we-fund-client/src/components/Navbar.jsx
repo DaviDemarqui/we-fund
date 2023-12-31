@@ -1,20 +1,18 @@
 import React, { useState } from 'react'
 import { navlinks } from '../constants/navlinks';
 import { Link, useNavigate } from 'react-router-dom';
-import { search, thirdweb } from '../assets';
 import CustomButton from './CustomButton';
+import { useStateContext } from '../context';
+import { search, thirdweb } from '../assets';
 import { menu } from '../assets';
 
+
 function Navbar() {
+
   const navigate = useNavigate();
-  
-  const [isActive, setIsActive] = useState
-  ('dashboard');
-
-  const [toggleDrawer, setToggleDrawer] = useState
-  (false);
-
-  const address = "0x09879";
+  const [isActive, setIsActive] = useState('dashboard');
+  const [toggleDrawer, setToggleDrawer] = useState(false);
+  const { connect, address } = useStateContext();
 
   return (
     <div className='flex md:flex-row
@@ -41,8 +39,12 @@ function Navbar() {
           title={address ? 'Create a campaign' : 'Connect'}
           styles={address ? 'bg-blue-600  hover:bg-blue-700 rounded-full' : 'bg-[#8c6dfd] rounded-full'}
           handleClick={() => {
-            if(address) navigate('create-campaign')
-            else 'connect()'
+            if(address) {
+              navigate('create-campaign');
+            }
+            else {
+              connect();
+            }
           }}
         />
 
@@ -98,8 +100,11 @@ function Navbar() {
                   title={address ? 'Create a campaign' : 'Connect'}
                   styles={address ? 'bg-blue-600  hover:bg-blue-700 rounded-full' : 'bg-[#8c6dfd] rounded-full'}
                   handleClick={() => {
-                    if(address) navigate('create-campaign')
-                    else 'connect()'
+                    if(address) {
+                      navigate('create-campaign');
+                    } else {
+                      connect();
+                    }
                   }}
                 />
               </div>
