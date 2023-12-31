@@ -26,7 +26,7 @@ function Navbar() {
           placeholder:text-[#8e9199] text-white bg-transparent outline-none' />
 
         <div className="w-[72px] h-full rounded-[20px]
-        bg-slate-700 hover:bg-blue-700 flex justify-center items-center
+        bg-indigo-700 hover:bg-indigo-800 flex justify-center items-center
           cursor-pointer">
             <img src={search} alt="search" className='w-[15px] h-[15px] object-contain' />
         </div>
@@ -37,7 +37,7 @@ function Navbar() {
         <CustomButton 
           btnType="button"
           title={address ? 'Create a campaign' : 'Connect'}
-          styles={address ? 'bg-blue-600  hover:bg-blue-700 rounded-full' : 'bg-[#8c6dfd] rounded-full'}
+          styles={address ? 'bg-indigo-700  hover:bg-indigo-800 rounded-full' : 'bg-indigo-700  hover:bg-indigo-800 rounded-full'}
           handleClick={() => {
             if(address) {
               navigate('create-campaign');
@@ -89,7 +89,7 @@ function Navbar() {
                       alt={link.name} 
                     />
                     <p className={`ml-[20px] font-normal text-[14px] 
-                    ${isActive === link.name ? 'text-blue-600' : 'text-white'}`}>{link.name}</p>
+                    ${isActive === link.name ? 'text-indigo-600' : 'text-white'}`}>{link.name}</p>
                   </li>
                 ))}
               </ul>
@@ -98,7 +98,7 @@ function Navbar() {
                 <CustomButton 
                   btnType="button"
                   title={address ? 'Create a campaign' : 'Connect'}
-                  styles={address ? 'bg-blue-600  hover:bg-blue-700 rounded-full' : 'bg-[#8c6dfd] rounded-full'}
+                  styles={address ? 'bg-indigo-600  hover:bg-indigo-700 rounded-full' : 'bg-indigo-600  hover:bg-indigo-700 rounded-full'}
                   handleClick={() => {
                     if(address) {
                       navigate('create-campaign');
