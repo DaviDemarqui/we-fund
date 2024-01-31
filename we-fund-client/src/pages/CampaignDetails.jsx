@@ -6,6 +6,7 @@ import CountBox from '../components/CountBox';
 import CustomButton from '../components/CustomButton';
 import Loader from '../components/Loader';
 import { calculateBarPercentage, daysLeft } from '../utils';
+import { thirdweb } from '../assets';
 
 
 const CampaignDetails = () => {
@@ -65,7 +66,7 @@ const CampaignDetails = () => {
 
             <div className="mt-[20px] flex flex-row items-center flex-wrap gap-[14px]">
               <div className="w-[52px] h-[52px] flex items-center justify-center rounded-full bg-[#2c2f32] cursor-pointer">
-                <img src='' alt="user" className="w-[60%] h-[60%] object-contain"/>
+                <img src={thirdweb} alt="user" className="w-[60%] h-[60%] object-contain"/>
               </div>
               <div>
                 <h4 className="font-epilogue font-semibold text-[14px] text-white break-all">{state.owner}</h4>
@@ -121,7 +122,7 @@ const CampaignDetails = () => {
               </div>
 
               <CustomButton 
-                disabled={amount < 1 || amount == null}
+                disabled={amount <= 0.01}
                 btnType="button"
                 title="Fund Campaign"
                 styles="w-full bg-[#8c6dfd] hover:bg-[#6b41ff] disabled:bg-[#9a8ec6]"
