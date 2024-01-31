@@ -7,6 +7,7 @@ import CustomButton from '../components/CustomButton';
 import Loader from '../components/Loader';
 import { calculateBarPercentage, daysLeft } from '../utils';
 
+
 const CampaignDetails = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ const CampaignDetails = () => {
         <div className="flex-1 flex-col">
           <img src={state.image} alt="campaign" className="w-full h-[410px] object-cover rounded-xl"/>
           <div className="relative w-full h-[5px] bg-[#3a3a43] mt-2">
-            <div className="absolute h-full bg-[#4acd8d]" style={{ width: `${calculateBarPercentage(state.target, state.amountCollected)}%`, maxWidth: '100%'}}>
+            <div className="absolute h-full bg-[#da46ff]" style={{ width: `${calculateBarPercentage(state.target, state.amountCollected)}%`, maxWidth: '100%'}}>
             </div>
           </div>
         </div>
@@ -120,9 +121,10 @@ const CampaignDetails = () => {
               </div>
 
               <CustomButton 
+                disabled={amount < 1 || amount == null}
                 btnType="button"
                 title="Fund Campaign"
-                styles="w-full bg-[#8c6dfd]"
+                styles="w-full bg-[#8c6dfd] hover:bg-[#6b41ff] disabled:bg-[#9a8ec6]"
                 handleClick={handleDonate}
               />
             </div>

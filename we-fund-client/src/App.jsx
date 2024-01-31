@@ -31,7 +31,7 @@ export default function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/profile" element={<ProfilePage />} />
               <Route path="/create-campaign" element={<CreateCampaign />} />
-              <Route path="/create-details" element={<CampaignDetails />} />
+              <Route path="/campaign-details/:id" element={<CampaignDetails />} />
             </Routes>
           </div>
 

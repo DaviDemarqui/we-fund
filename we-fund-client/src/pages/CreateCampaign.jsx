@@ -95,7 +95,7 @@ function CreateCampaign() {
               <FormField 
                 labelName="Goal *"
                 placeholder="ETH 0.50"
-                inputType="text"
+                inputType="number"
                 value={form.target}
                 handleChange={(e) => handleFormFieldChange('target', e)}
               />
@@ -121,7 +121,7 @@ function CreateCampaign() {
               <CustomButton 
                 btnType="submit"
                 title="Submit new campaign"
-                styles="bg-zinc-50 text-black"
+                styles="bg-purple-500 hover:bg-purple-600"
               />
             </div>
       </form>
